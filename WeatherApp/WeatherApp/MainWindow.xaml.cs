@@ -31,20 +31,28 @@ namespace WeatherApp
         {
             string query = textBoxQuery.Text;
             ConditionsResult result = WeatherService.GetWeatherFor(query);
-            labelLocation.Content = result.full;
-            labelTempF.Content = "Temperature: "+result.temperature_string;
-            labelTempC.Content = "Feels Like: "+result.feelslike_string;
-            labelElev.Content = "Elevation: "+result.elevation;
-            labelLatLong.Content = "Latitude / Longitude: " + result.latitude + "/" + result.longitude;
-            labelWindDir.Content = "Wind Direction: "+result.wind_dir;
-            labelConditions.Content = result.weather;
-            labelUpdate.Content = result.observation_time;
-            labelHumid.Content = "Humidity: "+result.relative_humidity;
-            labelVis.Content = "Visibility: "+result.visibility_mi+" miles";
-            labelUV.Content = "UV: "+result.UV;
-            labelPrec.Content = "Precipitation: "+result.precip_today_string;
-            labelWind.Content = "Wind: " + result.wind_mph;
-            imageWeather.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(result.icon + ".gif");
+
+            if (result == null)
+            {
+                MessageBox.Show(WeatherService.message);
+            }
+            else
+            {
+                labelLocation.Content = result.full;
+                labelTempF.Content = "Temperature: " + result.temperature_string;
+                labelTempC.Content = "Feels Like: " + result.feelslike_string;
+                labelElev.Content = "Elevation: " + result.elevation;
+                labelLatLong.Content = "Latitude / Longitude: " + result.latitude + "/" + result.longitude;
+                labelWindDir.Content = "Wind Direction: " + result.wind_dir;
+                labelConditions.Content = result.weather;
+                labelUpdate.Content = result.observation_time;
+                labelHumid.Content = "Humidity: " + result.relative_humidity;
+                labelVis.Content = "Visibility: " + result.visibility_mi + " miles";
+                labelUV.Content = "UV: " + result.UV;
+                labelPrec.Content = "Precipitation: " + result.precip_today_string;
+                labelWind.Content = "Wind: " + result.wind_mph;
+                imageWeather.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(result.icon + ".gif");
+            }
         }
     }
 }

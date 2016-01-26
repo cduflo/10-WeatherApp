@@ -8,7 +8,7 @@
         Title="MainWindow" Height="393.5" Width="745.5">
     <Grid>
         <Image x:Name="imageWeather" HorizontalAlignment="Left" Height="100" Margin="10,65,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="textBoxQuery" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="92109" VerticalAlignment="Top" Width="598"/>
+        <TextBox x:Name="textBoxQuery" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="598"/>
         <Button x:Name="buttonQuery" Content="Search" HorizontalAlignment="Left" Margin="645,13,0,0" VerticalAlignment="Top" Width="75" Click="buttonQuery_Click"/>
         <Label x:Name="labelLocation" Content="" HorizontalAlignment="Left" Margin="135,65,0,0" VerticalAlignment="Top" Height="31" Width="279"/>
         <Label x:Name="labelLatLong" Content="" HorizontalAlignment="Left" Height="34" Margin="135,101,0,0" VerticalAlignment="Top" Width="279"/>
@@ -23,6 +23,7 @@
         <Label x:Name="labelElev" Content="" HorizontalAlignment="Left" Margin="432,65,0,0" VerticalAlignment="Top" Height="31" Width="272"/>
         <Label x:Name="labelUpdate" Content="" HorizontalAlignment="Left" Height="34" Margin="432,101,0,0" VerticalAlignment="Top" Width="272"/>
         <Label x:Name="labelWind" Content="" HorizontalAlignment="Left" Height="29" Margin="10,262,0,0" VerticalAlignment="Top" Width="239"/>
+        <Label x:Name="label" Content="(ie. San Diego, CA / Paris, France / 92109 / SFO)" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="430"/>
 
     </Grid>
 </Window>
